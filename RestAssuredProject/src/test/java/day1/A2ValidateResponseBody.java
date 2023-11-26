@@ -2,7 +2,6 @@ package day1;
 
 import io.restassured.RestAssured;
 import payloads.AddPlace;
-
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
