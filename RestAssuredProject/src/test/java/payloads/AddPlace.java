@@ -1,17 +1,10 @@
-package day1;
+package payloads;
 
-import io.restassured.RestAssured;
-import static io.restassured.RestAssured.*;
-
-
-public class Day1 {
-	public static void main(String[] args) {
+public class AddPlace {
+	
+	public static String AddPlaceBody() {
 		
-		RestAssured.baseURI="https://rahulshettyacademy.com";
-		
-		given().log().all().queryParam("key", "qaclick123")
-		.header("Content-Type", "application/json")
-		.body("{\r\n"
+		return "{\r\n"
 				+ "  \"location\": {\r\n"
 				+ "    \"lat\": -38.383494,\r\n"
 				+ "    \"lng\": 33.427362\r\n"
@@ -27,9 +20,7 @@ public class Day1 {
 				+ "  \"website\": \"http://google.com\",\r\n"
 				+ "  \"language\": \"French-IN\"\r\n"
 				+ "}\r\n"
-				+ "")
-		.when().post("/maps/api/place/add/json")
-		.then().log().all().assertThat().statusCode(200);
+				+ "";
 	}
-
+	
 }
