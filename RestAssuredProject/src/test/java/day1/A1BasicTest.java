@@ -4,7 +4,7 @@ import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 
 
-public class BasicTest {
+public class A1BasicTest {
 	public static void main(String[] args) {
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";

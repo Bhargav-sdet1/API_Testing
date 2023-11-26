@@ -6,7 +6,7 @@ import payloads.AddPlace;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class ValidateResponseBody {
+public class A2ValidateResponseBody {
 	public static void main(String[] args) {
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";
