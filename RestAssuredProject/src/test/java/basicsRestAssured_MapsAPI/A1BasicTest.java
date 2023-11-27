@@ -1,4 +1,4 @@
-package basicsRestAssured;
+package basicsRestAssured_MapsAPI;
 
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;

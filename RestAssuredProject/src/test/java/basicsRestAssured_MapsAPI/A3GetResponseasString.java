@@ -1,4 +1,4 @@
-package basicsRestAssured;
+package basicsRestAssured_MapsAPI;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

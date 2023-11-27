@@ -1,4 +1,4 @@
-package basicsRestAssured;
+package basicsRestAssured_MapsAPI;
 
 import org.testng.Assert;
 
