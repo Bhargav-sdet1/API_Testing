@@ -1,4 +1,4 @@
-package day1;
+package basicsRestAssured;
 
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
