@@ -5,7 +5,7 @@
     <classes>
       <class name="ecomE2E.EcomE2E">
         <methods>
-          <include name="DeleteProduct"/>
+          <include name="createOrder"/>
         </methods>
       </class> <!-- ecomE2E.EcomE2E -->
     </classes>
