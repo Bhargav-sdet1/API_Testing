@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\bharg\AppData\Local\Temp\testng-eclipse--1545942648\testng-customsuite.xml</span>
+                    <span>C:\Users\bharg\AppData\Local\Temp\testng-eclipse--181007405\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="pojoClassesRestAssured.SpecBuilderTest" class="method navigator-link" hash-for-method="AddPlace">AddPlace</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="ecomE2E.EcomE2E" class="method navigator-link" hash-for-method="CreateOrder">CreateOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ecomE2E.EcomE2E" class="method navigator-link" hash-for-method="DeleteProduct">DeleteProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ecomE2E.EcomE2E" class="method navigator-link" hash-for-method="Login">Login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +131,28 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">pojoClassesRestAssured.SpecBuilderTest</span>
+              <span class="class-name">ecomE2E.EcomE2E</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddPlace">
-                  </a> <!-- AddPlace -->
-                  <span class="method-name">AddPlace</span>
+                  <a name="CreateOrder">
+                  </a> <!-- CreateOrder -->
+                  <span class="method-name">CreateOrder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteProduct">
+                  </a> <!-- DeleteProduct -->
+                  <span class="method-name">DeleteProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +160,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\bharg\AppData\Local\Temp\testng-eclipse--1545942648\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\bharg\AppData\Local\Temp\testng-eclipse--181007405\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +169,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;pojoClassesRestAssured.SpecBuilderTest&quot;/&gt;
+      &lt;class name=&quot;ecomE2E.EcomE2E&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AddPlace')
-data.setCell(0, 2, 'pojoClassesRestAssured.SpecBuilderTest')
-data.setCell(0, 3, 2527);
+data.setCell(0, 1, 'Login')
+data.setCell(0, 2, 'ecomE2E.EcomE2E')
+data.setCell(0, 3, 3421);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'CreateOrder')
+data.setCell(1, 2, 'ecomE2E.EcomE2E')
+data.setCell(1, 3, 957);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'DeleteProduct')
+data.setCell(2, 2, 'ecomE2E.EcomE2E')
+data.setCell(2, 3, 159);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,10 +252,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">pojoClassesRestAssured.SpecBuilderTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ecomE2E.EcomE2E</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">AddPlace</span>
+                <span class="method-name">Login</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CreateOrder</span>
+                <span class="method-start">3428 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DeleteProduct</span>
+                <span class="method-start">4390 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
