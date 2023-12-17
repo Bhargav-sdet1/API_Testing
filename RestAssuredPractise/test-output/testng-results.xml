@@ -1,29 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-12T13:32:01 IST" name="Default suite" finished-at="2023-12-12T13:32:05 IST" duration-ms="3952">
+  <suite started-at="2023-12-17T23:38:31 IST" name="Default suite" finished-at="2023-12-17T23:38:31 IST" duration-ms="378">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberTestRunner.TestRunner@63376bed]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-12-12T13:32:01 IST" name="Default test" finished-at="2023-12-12T13:32:05 IST" duration-ms="3952">
-      <class name="ecomE2E.EcomE2E">
-        <test-method signature="Login()[pri:1, instance:ecomE2E.EcomE2E@25fb8912]" started-at="2023-12-12T13:32:01 IST" name="Login" finished-at="2023-12-12T13:32:03 IST" duration-ms="2382" status="PASS">
+    <test started-at="2023-12-17T23:38:31 IST" name="Default test" finished-at="2023-12-17T23:38:31 IST" duration-ms="378">
+      <class name="cucumberTestRunner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumberTestRunner.TestRunner@63376bed]" started-at="2023-12-17T23:38:31 IST" name="setUpClass" finished-at="2023-12-17T23:38:31 IST" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@207ea13]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="CreateProduct()[pri:2, instance:ecomE2E.EcomE2E@25fb8912]" started-at="2023-12-12T13:32:03 IST" name="CreateProduct" finished-at="2023-12-12T13:32:04 IST" duration-ms="905" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberTestRunner.TestRunner@63376bed]" started-at="2023-12-17T23:38:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-17T23:38:31 IST" duration-ms="96" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User navigate to Home page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Application Login"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at stepDefinitions.Login.user_is_on_login_page(Login.java:11)
+at ✽.user is on login page(file:///C:/Users/bharg/ForInterviews/RestAssuredPractise/src/test/java/features/login.feature:4)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateProduct -->
-        <test-method signature="createOrder()[pri:3, instance:ecomE2E.EcomE2E@25fb8912]" started-at="2023-12-12T13:32:04 IST" name="createOrder" finished-at="2023-12-12T13:32:05 IST" duration-ms="413" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberTestRunner.TestRunner@63376bed]" started-at="2023-12-17T23:38:31 IST" name="tearDownClass" finished-at="2023-12-17T23:38:31 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrder -->
-        <test-method signature="DeleteProduct()[pri:4, instance:ecomE2E.EcomE2E@25fb8912]" started-at="2023-12-12T13:32:05 IST" name="DeleteProduct" finished-at="2023-12-12T13:32:05 IST" duration-ms="182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteProduct -->
-      </class> <!-- ecomE2E.EcomE2E -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberTestRunner.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
