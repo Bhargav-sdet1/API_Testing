@@ -1,64 +1,31 @@
 package stepDefinitions;
 
-import java.util.ArrayList;
-import java.util.List;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
-
 import io.cucumber.java.en.*;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
-import pojoClasses.AddDetails;
-import pojoClasses.Location;
+import resources.TestData;
+import resources.Utils;
 
-public class AddPlace {
-	AddDetails ad; 
-	Location loc;
-	RequestSpecification request;
-	ResponseSpecification res;
+public class AddPlace extends Utils{
+	
+	RequestSpecification request;	
 	Response response;
 	
 	@Given("Add place Payload")
 	public void add_place_payload() {
-		loc = new Location();
-		loc.setLat(-345.23);
-		loc.setLng(234.123);
-		
-		List<String> myList=new ArrayList<String>();
-		myList.add("Shoe Park");
-		myList.add("Shop");
-		
-		ad= new AddDetails();
-		ad.setAccuracy(50);
-		ad.setAddress("Pochampally Road");
-		ad.setLanguage("Telugu");;
-		ad.setLocation(loc);
-		ad.setName("Bhargav");
-		ad.setPhone_number("+919999999999");
-		ad.setTypes(myList);
-		ad.setWebsite("http://google.com");
-		
-		RequestSpecification req=new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
-		.setContentType(ContentType.JSON).build();
-		
-		res=new ResponseSpecBuilder().expectStatusCode(200)
-				.expectContentType(ContentType.JSON).build();
-		
-		request= given().log().all().spec(req).body(ad);
-		
-		
-		
+						
+		request= given().log().all().spec(requestSpec())
+				.body(TestData.addPlacePayload());
+			
 	}
 
 	@When("user calls {string} API with POST http request")
 	public void user_calls_api_with_post_http_request(String string) {
 		response=request.when().post("/maps/api/place/add/json")
-	    .then().log().all().spec(res).extract().response();
+	    .then().log().all().spec(utils.responseSpec()).extract().response();
 	}
 
 	@Then("Verify API call got success with status code {int}")
