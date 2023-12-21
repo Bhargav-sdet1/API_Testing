@@ -2,6 +2,9 @@ package stepDefinitions;
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
+
+import java.io.FileNotFoundException;
+
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -15,17 +18,15 @@ public class AddPlace extends Utils{
 	Response response;
 	
 	@Given("Add place Payload")
-	public void add_place_payload() {
-						
-		request= given().log().all().spec(requestSpec())
-				.body(TestData.addPlacePayload());
-			
+	public void add_place_payload() throws FileNotFoundException {
+		request= given().spec(requestSpec())
+				.body(TestData.addPlacePayload());			
 	}
 
 	@When("user calls {string} API with POST http request")
 	public void user_calls_api_with_post_http_request(String string) {
 		response=request.when().post("/maps/api/place/add/json")
-	    .then().log().all().spec(utils.responseSpec()).extract().response();
+	    .then().spec(responseSpec()).extract().response();
 	}
 
 	@Then("Verify API call got success with status code {int}")
