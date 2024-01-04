@@ -18,7 +18,7 @@ Body:
     "accuracy": 50,
     "name": "Bhargav",
     "phone_number": "+919999999999",
-    "address": "Pochampally Road",
+    "address": "Hyderabad",
     "types": [
         "Shoe Park",
         "Shop"
@@ -27,7 +27,7 @@ Body:
     "language": "Telugu"
 }
 HTTP/1.1 200 OK
-Date: Thu, 04 Jan 2024 13:13:50 GMT
+Date: Thu, 04 Jan 2024 13:55:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,55 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "a53bba76d331ed10d7cc78e87271e8c7",
+    "place_id": "3fc8c851a36de6802d60ad562ee45ce6",
     "scope": "APP",
-    "reference": "90df6cb8d93786fb3f5aaa9705c8bbb990df6cb8d93786fb3f5aaa9705c8bbb9",
-    "id": "90df6cb8d93786fb3f5aaa9705c8bbb9"
+    "reference": "af810c8f68dfdcdd81f84989be79f717af810c8f68dfdcdd81f84989be79f717",
+    "id": "af810c8f68dfdcdd81f84989be79f717"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -345.23,
+        "lng": 234.123
+    },
+    "accuracy": 50,
+    "name": "Vithika",
+    "phone_number": "+919999999999",
+    "address": "Uppal",
+    "types": [
+        "Shoe Park",
+        "Shop"
+    ],
+    "website": "http://google.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Thu, 04 Jan 2024 13:55:04 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "69d82cae75797900adf8e6a39a1cc306",
+    "scope": "APP",
+    "reference": "dd96d0abe888b414d9653062709e68bedd96d0abe888b414d9653062709e68be",
+    "id": "dd96d0abe888b414d9653062709e68be"
 }

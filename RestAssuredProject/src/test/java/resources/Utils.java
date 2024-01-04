@@ -15,16 +15,19 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class Utils {
-	public RequestSpecification req;
+	public static RequestSpecification req;
 	public ResponseSpecification res;
 	
 	public RequestSpecification requestSpec() throws IOException {
+		if(req==null) {
 		PrintStream log = new PrintStream(new File("logging.txt"));
 		req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseurl"))
 				.addFilter(RequestLoggingFilter.logRequestTo(log))
 				.addFilter(ResponseLoggingFilter.logResponseTo(log))
 				.setContentType(ContentType.JSON).build();
 		
+		return req;
+		}
 		return req;
 	}
 	public ResponseSpecification responseSpec() {
