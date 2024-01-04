@@ -27,7 +27,7 @@ Body:
     "language": "Telugu"
 }
 HTTP/1.1 200 OK
-Date: Thu, 21 Dec 2023 17:07:28 GMT
+Date: Thu, 04 Jan 2024 13:13:50 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,8 +40,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "36654cae315441e76d42abab09243215",
+    "place_id": "a53bba76d331ed10d7cc78e87271e8c7",
     "scope": "APP",
-    "reference": "d4de151e1d74dba2f0d0f0f1c8e4cdb6d4de151e1d74dba2f0d0f0f1c8e4cdb6",
-    "id": "d4de151e1d74dba2f0d0f0f1c8e4cdb6"
+    "reference": "90df6cb8d93786fb3f5aaa9705c8bbb990df6cb8d93786fb3f5aaa9705c8bbb9",
+    "id": "90df6cb8d93786fb3f5aaa9705c8bbb9"
 }

@@ -3,7 +3,7 @@ package stepDefinitions;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
@@ -18,7 +18,7 @@ public class AddPlace extends Utils{
 	Response response;
 	
 	@Given("Add place Payload")
-	public void add_place_payload() throws FileNotFoundException {
+	public void add_place_payload() throws IOException {
 		request= given().spec(requestSpec())
 				.body(TestData.addPlacePayload());			
 	}
