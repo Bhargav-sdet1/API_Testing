@@ -10,9 +10,6 @@ public class StringReverse {
 		}
 		System.out.println();
 		
-		String[] str=a.split(" ");
-		
-		
 	}
 
 }
