@@ -19,8 +19,6 @@ public class CharCount {
 			}
 		}
 		System.out.println(hm);
-		
-
 	}
 
 }
