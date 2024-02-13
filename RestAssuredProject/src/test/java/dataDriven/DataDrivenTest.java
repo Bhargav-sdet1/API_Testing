@@ -15,11 +15,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class DataDrivenTest {
 	
-	public static ArrayList<String> getData(String testCaseName) throws IOException {
+	public static ArrayList<String> getData(String sheetName,String testCaseName) throws IOException {
 		FileInputStream fis = new FileInputStream("E:\\Login.xlsx");
 
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		String sheetName = "Sheet1";
+		
 		ArrayList<String> al = new ArrayList<String>();		
 		int sheetsCount = workbook.getNumberOfSheets();
 
@@ -37,7 +37,7 @@ public class DataDrivenTest {
 				int k = 0;
 				while (cells.hasNext()) {
 					Cell cValue = cells.next();
-					if (cValue.getStringCellValue().equalsIgnoreCase("TestCases")) {
+					if (cValue.getStringCellValue().equalsIgnoreCase(testCaseName)) {
 						column = k;
 					}
 					k++;
@@ -63,9 +63,4 @@ public class DataDrivenTest {
 		return al;
 	}
 
-	public static void main(String[] args) throws IOException {
-
-		DataDrivenTest.getData("Purchase");
-		
-	}
 }
