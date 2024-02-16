@@ -1,5 +1,6 @@
 package day1;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class LaunchBrowser {
+public class LaunchBrowser extends Basic{
 
 	WebDriver driver;
 	
@@ -22,7 +23,7 @@ public class LaunchBrowser {
 	}
 	
 	@Test
-	public void Login() {
+	public void Login() throws IOException {
 		String CurrentTitle="Arya Muse";
 		String ExpectedTitle=driver.getTitle();
 		Assert.assertEquals(CurrentTitle,ExpectedTitle );
@@ -30,6 +31,7 @@ public class LaunchBrowser {
 		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("nov9@yopmail.com");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Asdfg1@34");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		takeScreenShot(driver);
 	}
 	
 	@AfterTest
