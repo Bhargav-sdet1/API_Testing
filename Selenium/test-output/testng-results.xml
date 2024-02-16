@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T12:23:10 IST" name="Default suite" finished-at="2024-02-12T12:23:19 IST" duration-ms="9330">
+  <suite started-at="2024-02-16T10:51:45 IST" name="Default suite" finished-at="2024-02-16T10:51:53 IST" duration-ms="8324">
     <groups>
     </groups>
-    <test started-at="2024-02-12T12:23:10 IST" name="Default test" finished-at="2024-02-12T12:23:19 IST" duration-ms="9330">
-      <class name="day1.MuseLogin">
-        <test-method signature="SetUp()[pri:1, instance:day1.MuseLogin@316bcf94]" started-at="2024-02-12T12:23:10 IST" name="SetUp" finished-at="2024-02-12T12:23:13 IST" duration-ms="3324" status="PASS">
+    <test started-at="2024-02-16T10:51:45 IST" name="Default test" finished-at="2024-02-16T10:51:53 IST" duration-ms="8324">
+      <class name="day1.LaunchBrowser">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:day1.LaunchBrowser@130c12b7]" started-at="2024-02-16T10:51:45 IST" name="SetUp" finished-at="2024-02-16T10:51:49 IST" duration-ms="3920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="Login()[pri:2, instance:day1.MuseLogin@316bcf94]" started-at="2024-02-12T12:23:13 IST" name="Login" finished-at="2024-02-12T12:23:14 IST" duration-ms="454" status="PASS">
+        <test-method signature="Login()[pri:0, instance:day1.LaunchBrowser@130c12b7]" started-at="2024-02-16T10:51:49 IST" name="Login" finished-at="2024-02-16T10:51:50 IST" duration-ms="1068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="tearDown()[pri:3, instance:day1.MuseLogin@316bcf94]" started-at="2024-02-12T12:23:14 IST" name="tearDown" finished-at="2024-02-12T12:23:19 IST" duration-ms="5513" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:day1.LaunchBrowser@130c12b7]" started-at="2024-02-16T10:51:50 IST" name="teardown" finished-at="2024-02-16T10:51:53 IST" duration-ms="3234" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- day1.MuseLogin -->
+        </test-method> <!-- teardown -->
+      </class> <!-- day1.LaunchBrowser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
