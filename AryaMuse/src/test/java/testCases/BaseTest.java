@@ -8,15 +8,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public class BaseTest {
+
 	WebDriver driver;
 	
 	@BeforeClass
 	public void setUp() {
-		driver = new ChromeDriver();
-		driver.manage().deleteAllCookies();
+		driver= new ChromeDriver();
 		driver.get("https://muse.goarya.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	@AfterClass
@@ -24,9 +24,8 @@ public class BaseTest {
 		driver.quit();
 	}
 	
-	public String generateString() {
-	String randomString=RandomStringUtils.randomAlphabetic(5);
-	return randomString;
+	public String randomString() {
+		String randomString=RandomStringUtils.randomAlphabetic(5);
+		return randomString;
 	}
-	
 }
