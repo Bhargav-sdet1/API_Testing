@@ -13,6 +13,7 @@ public class LoginPage extends BasePage{
 	@FindBy(xpath="//input[@type='email']") WebElement Email;
 	@FindBy(xpath="//input[@type='password']") WebElement Password;
 	@FindBy(xpath="//button[@type='submit']") WebElement loginBtn;
+	@FindBy(xpath="//li[@role='menuitem']//a") WebElement HomeIcon;
 	
 	public void eneterEmail(String uEmail) {
 		Email.sendKeys(uEmail);
@@ -24,6 +25,9 @@ public class LoginPage extends BasePage{
 		loginBtn.click();;
 	}
 	
+	public boolean homeicon() {
+		return  HomeIcon.isDisplayed();
+	}
 
 	
 }
