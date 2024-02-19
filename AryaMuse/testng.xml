@@ -7,7 +7,6 @@
   <test thread-count="5" name="Test">
 	  <parameter name="browser" value="chrome" />
     <classes>
-      <class name="testCases.BaseTest"/>
       <class name="testCases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
