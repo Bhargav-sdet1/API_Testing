@@ -3,21 +3,20 @@ package veryImp;
 public class Palindrome {
 
 	public static void main(String[] args) {
-		palindromeCount(16);
-	}
-
-	private static void palindromeCount(int count) {
-		int a1=0, a2=1;
-		System.out.print(a1+" "+a2);
+		int num=5995;int actNum=num;
+		int rev=0; int rem;
 		
-		int a3;
-		for(int i=2;i<count;++i) {
-			a3=a1+a2;
-			System.out.print(" "+a3);
-			a1=a2;
-			a2=a3;
+		while(num>0) {
+			rem=num%10;
+			rev=rem+rev*10;
+			num=num/10;
 		}
-		
+		if(actNum==rev) {
+			System.out.println("Palindrome");
+		}
+		else {
+			System.out.println("Not Palindrome");
+		}
 	}
 
 }
