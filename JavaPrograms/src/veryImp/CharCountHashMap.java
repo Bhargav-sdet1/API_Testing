@@ -1,14 +1,15 @@
-package veryImp;
+package stringPrograms;
 
 import java.util.HashMap;
 
 public class CharCountHashMap {
 
 	public static void main(String[] args) {
-		String abc="Bhargav";
-		char[] ch=abc.toCharArray();
+		String name="Bharggav".toLowerCase();
 		
-		HashMap<Character,Integer> hm= new HashMap<Character,Integer>();
+		char ch[] =name.toCharArray();
+		
+		HashMap<Character, Integer> hm= new HashMap<Character,Integer>();
 		
 		for(char c:ch) {
 			if(hm.containsKey(c)) {
@@ -19,7 +20,6 @@ public class CharCountHashMap {
 			}
 		}
 		System.out.println(hm);
-		
 	}
 
 }
